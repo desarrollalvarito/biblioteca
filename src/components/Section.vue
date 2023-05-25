@@ -1,48 +1,23 @@
 <template>
+<!-- Services -->
   <div class="services section" id="services">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6" v-for="service in services" :key="service.id">
           <div class="service-item">
             <div class="icon">
-              <img src="assets/images/service-01.png" alt="online degrees">
+              <img :src="service.img" :alt="service.alt">
             </div>
             <div class="main-content">
-              <h4>Prestamo de Libros</h4>
-              <p>Whenever you need free templates in HTML CSS, you just remember TemplateMo website.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item">
-            <div class="icon">
-              <img src="assets/images/service-02.png" alt="short courses">
-            </div>
-            <div class="main-content">
-              <h4>Acceso a Internet</h4>
-              <p>You can browse free templates based on different tags such as digital marketing, etc.</p>
-              <div class="main-button">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item">
-            <div class="icon">
-              <img src="assets/images/service-03.png" alt="web experts">
-            </div>
-            <div class="main-content">
-              <h4>Sala de Computacion</h4>
-              <p>You can start learning HTML CSS by modifying free templates from our website too.</p>
-              <div class="main-button">
-              </div>
+              <h4>{{ service.name }}</h4>
+              <p>{{ service.description }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+<!-- End Services -->
   <section class="section courses" id="courses" >
     <div class="container">
       <div class="row">
@@ -71,7 +46,7 @@
         <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 u">
           <div class="events_item">
             <div class="thumb">
-              <a href="#" target="_blank"><img src="assets/images/course-01.jpg" alt=""></a>
+              <a href="#" target="_blank"><img src="../assets/images/course-01.jpg" alt=""></a>
               <span class="category">UNITEPC</span>
               <span class="price"><h6><em>#</em>1</h6></span>
             </div>
@@ -84,7 +59,7 @@
         <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  u">
           <div class="events_item">
             <div class="thumb">
-              <a href="https://unitepc.edu.bo/biblioteca/" target="_blank"><img src="assets/images/course-02.jpg" alt=""></a>
+              <a href="https://unitepc.edu.bo/biblioteca/" target="_blank"><img src="../assets/images/course-02.jpg" alt=""></a>
               <span class="category">UNITEPC</span>
               <span class="price"><h6><em>#</em>2</h6></span>
             </div>
@@ -97,7 +72,7 @@
         <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  u">
           <div class="events_item">
             <div class="thumb">
-              <a href="https://unitepc.edu.bo/biblioteca/" target="_blank"><img src="assets/images/course-02.jpg" alt=""></a>
+              <a href="https://unitepc.edu.bo/biblioteca/" target="_blank"><img src="../assets/images/course-02.jpg" alt=""></a>
               <span class="category">UNITEPC</span>
               <span class="price"><h6><em>#</em>3</h6></span>
             </div>
@@ -110,7 +85,7 @@
         <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  u">
           <div class="events_item">
             <div class="thumb">
-              <a href="https://unitepc.edu.bo/biblioteca/" target="_blank"><img src="assets/images/course-03.jpg" alt=""></a>
+              <a href="https://unitepc.edu.bo/biblioteca/" target="_blank"><img src="../assets/images/course-03.jpg" alt=""></a>
               <span class="category">UNITEPC</span>
               <span class="price"><h6><em>#</em>4</h6></span>
             </div>
@@ -123,7 +98,7 @@
         <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  u">
           <div class="events_item">
             <div class="thumb">
-              <a href="https://unitepc.edu.bo/biblioteca/" target="_blank"><img src="assets/images/course-05.jpg" alt=""></a>
+              <a href="https://unitepc.edu.bo/biblioteca/" target="_blank"><img src="../assets/images/course-05.jpg" alt=""></a>
               <span class="category">UNITEPC</span>
               <span class="price"><h6><em>#</em>5</h6></span>
             </div>
@@ -136,7 +111,7 @@
         <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  u">
           <div class="events_item">
             <div class="thumb">
-              <a href="https://unitepc.edu.bo/biblioteca/" target="_blank"><img src="assets/images/course-05.jpg" alt=""></a>
+              <a href="https://unitepc.edu.bo/biblioteca/" target="_blank"><img src="../assets/images/course-05.jpg" alt=""></a>
               <span class="category">UNITEPC</span>
               <span class="price"><h6><em>#</em>6</h6></span>
             </div>
@@ -233,7 +208,7 @@
             <div class="row">
               <div class="col-lg-3">
                 <div class="image">
-                  <img src="assets/images/event-02.jpg" alt="">
+                  <img src="../assets/images/event-02.jpg" alt="">
                 </div>
               </div>
               <div class="col-lg-9">
@@ -297,10 +272,13 @@
   </div>
 </template>
 
-<script>
-    export default {
-        
-    }
+<script setup>
+import Data from '../assets/js/data.js'
+import { reactive, ref } from 'vue'
+
+const services = ref(Data)
+
+console.log(services)
 </script>
 
 <style lang="scss" scoped>
