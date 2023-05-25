@@ -1,4 +1,4 @@
-const services = [
+export const Services = [
   {
     id: 1,
     name: "Prestamo de Libros",
@@ -22,7 +22,7 @@ const services = [
   },
 ];
 
-const links=[
+export const Links=[
   {
     id: 1,
     category: "unitepc",
@@ -31,5 +31,52 @@ const links=[
     title: "Lil Dbi Web",
     description: "Catalogo de Libros de la Biblioteca La Amistad",
   },
+  {
+    id: 2,
+    category: "unitepc",
+    link: "https://unitepc.edu.bo/biblioteca/",
+    img: "src/assets/images/course-01.jpg",
+    title: "Biblioteca Virtual UNITEPC",
+    description: "Catalogo de Libros de la Biblioteca Sede Central",
+  },
+  {
+    id: 3,
+    category: "unitepc",
+    link: "",
+    img: "src/assets/images/course-01.jpg",
+    title: "Revista Científica de Salud",
+    description: "Revista oficial para el área de salud de la Universidad Técnica Privada Cosmos, sección de difusión científica y tecnológica, que inició sus publicaciones, en enero del 2016.",
+  },
+  {
+    id: 4,
+    category: "unitepc",
+    link: "",
+    img: "src/assets/images/course-01.jpg",
+    title: "Revista Científica de salud de la Amazonia",
+    description: "Sitio de difusión científica, tecnológica e innovación, que inició sus publicaciones, en enero del 2022.",
+  },
+  {
+    id: 5,
+    category: "unitepc",
+    link: "",
+    img: "src/assets/images/course-01.jpg",
+    title: "Central de Apuntes",
+    description: "Aquí podrás compartir y encontrar apuntes para todas las carreras",
+  },
+  {
+    id: 6,
+    category: "unitepc",
+    link: "",
+    img: "src/assets/images/course-01.jpg",
+    title: "Repositorio UNITEPC",
+    description: "Aquí podrás encontrar contenidos de trabajos de grado como ser proyectos, tesis, articulos, etc.",
+  },
+  {
+    id: 7,
+    category: "nacional",
+    link: "",
+    img: "src/assets/images/course-01.jpg",
+    title: "EBSCO",
+    description: "Aquí podrás encontrar contenidos de trabajos de grado como ser proyectos, tesis, articulos, etc.",
+  },
 ]
-export default services
